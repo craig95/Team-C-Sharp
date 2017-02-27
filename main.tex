@@ -1,0 +1,45 @@
+\documentclass[11pt]{article}
+\addtolength{\oddsidemargin}{-1.cm}
+\addtolength{\textwidth}{2cm}
+\addtolength{\topmargin}{-2cm}
+\addtolength{\textheight}{3.5cm}
+
+\usepackage[pdftex]{graphicx}
+\usepackage{pdflscape}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{cite}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	filecolor=magenta,
+	urlcolor=cyan,
+}
+
+% define the title
+\author{Team C\#}
+\title{Architectural Requirements Specifications and Design for the NavUP System}
+
+\begin{document}
+	\setlength{\parskip}{6pt}
+	
+	% generates the Cover page
+	\input{CoverPage.tex}
+	
+	\tableofcontents
+	
+	\newpage
+
+\section{Fitness Module}
+    \input{Fitness/fitness.tex}
+    
+\section{Navigation Module}
+    \input{Navigation/navigation.tex}
+
+\section{Points of Interest}
+    \input{POI/poi.tex}
+    
+\section{Users Module}
+    \input{Users/user.tex}
+
+\end{document}
