@@ -1,1 +1,15 @@
-POI stuff go in here
+\documentclass[a4paper, 12pt]{article}
+
+\begin{document}
+\section{External Interface Requirements}
+	\subsection{System Interfaces}
+The NavUp systems’ interfaces include locating and retrieving site information (building names, addresses, etc.) based on the information retrieved from the Navigation module. The site information will be used for gathering and maintaining any information of interest with regard to the “searched” location. The acquired information about the location will be stored and pushed as a notification to the users’ interface where users can view and read it.
+	\subsection{User Interfaces}
+The system will allow users to find locations, so the route guidelines to the destination will be displayed on the users’ screen interface, route guidelines include a pin-point indicating users’ current positon, colored route path to the destination, and the pin-point indicating the destination. So, once the information of interest with regard to the location has been acquired, the information will be sent to the user as a notification, and the notification may be in a form of SMS, E-mail, or a push notification. The user will have an option to alter how the notifications are received, that is, either as an E-mail, push notification or an SMS.
+	\subsection{Hardware Interfaces}
+The Wi-Fi routers and mobile phones are the only primary hardware interfaces that may be required for the “points of interest” module. Mobile phones will be used for all the user interfaces and the functionality of the NavUp system and the Wi-Fi access points as a reference for detecting locations both indoors and outdoors.
+	\subsection{Software Interfaces}
+The NavUp will primarily run on mobile phones. Therefore, for compatibility requirements, the NavUp system should be hybrid, that is, it has to be compatible across most, if not all ranges of mobile smart phones and mobile operating systems, that is either Android OS, iOS, or Microsoft Windows. The system can also be web-based.
+	\subsection{Communication Interfaces}
+The system will frequently communicate with the campus map database, servers and the mobiles’ GPS to get locations and directions through Wi-Fi networking. Any acquired information of interest with regard to the desired location may be retrieved from the database through servers. The systems’ communication interface may also include web services.
+\end{document}
