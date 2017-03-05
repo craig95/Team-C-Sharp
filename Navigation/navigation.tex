@@ -14,20 +14,22 @@
 	\section{Navigation}
 	
 	\subsection{External Interface Requirements}
-	\paragraph 
-		These requirements relate to both interfacing with other subsystems within the UP Nav system as well as interfacing 
-		with the hardware that the application will be deployed on.
+	 \textbf{ \paragraph These requirements relate to both interfacing with other subsystems within the UP Nav system as well as interfacing with the hardware that the application will be deployed on.}
 	\begin{itemize}
 		\small
 		\item To "Notifications" module will be used to give directions to the user during navigation in the form of push notifications.
 		\item The "Points of interest" module will be seen by the Navigation module simply as destinations to be navigated to or as a current location.
-		\item 
+		\item The GIS module will be used continually throughout navigation and as such is included in most of the UML diagrams, because of this tight coupling, implementation of the system needs to be done in a way that ensures easy communications between these two subsystems.
+		\item Interfacing with the user's mobile device will be done with a cross platform API, explained in the "Technologies" section.
 	\end{itemize}
 	
 	\subsection{Performance Requirements}
 	\begin{itemize}
 		\small
-		\item 	
+		\item Immediate response in the form of a notificaiton if user goes off route
+		\item User can choose if application can continue navigation in the background even if the application isn't currently open. (Optional background data usage)
+		\item "Fuzzy searching" when user is looking for a destination and misspells a word the application can still recognise the intended destination and navigate to the correct place.
+		\item Navigation seamlessly continues when user suddenly changes from using campus wifi to using mobile data. (Interaction between GIS module and Navigation module is important here.)
 	\end{itemize}
 	
 	\subsection{Design Constraints}
@@ -37,22 +39,29 @@
 			in the types of design patterns we are able to use within the subsystems due to the requirements 
 			imposed upon the system as a whole.
 		\item The Navigation subsystem receives critical information from the GIS subsystem to ensure that the route
-			calculated is correct and to recalculate the route in real time if the user goes off track.The coupling between
-			these two modules will have to be high to ensure the user's needs are met.\
+			calculated is correct and to recalculate the route in real time if the user goes off track. The coupling between these two modules will be high and might affect the implementation of other subsystems that also rely upon GIS information.
+		\item Our application will be deployed across multiple platforms using different GIS implementations forcing the Navigation module to be able to perform uniformly when receiving coordinates in different formats or encodings.
+		\item Users will want to limit the amount of data transfer occurring when using the application, the only way to implement this is to restrict communication with the server and database which could impact navigation efficiency and user experience.
 	\end{itemize}
 	
 	\subsection{Software System Attributes}
 	\begin{itemize}
 		\small 
 		\item High cohesion with low coupling allowing for easy addition, removal or replacement of modules.
-		\item Polymorphism will be implemented as means of specifying object behaviour when the user imposes restrictions
-			upon the base behaviour of the object.
+		\item Polymorphism will be implemented as means of specifying object behaviour when the user imposes restrictions upon the base behaviour of the object.
+		\item All source files will be written in an Object Oriented capable language.
+		\item We will need to interface with the user's device at a level capable of accessing push notifications and 
+		 GIS data.
 	\end{itemize}
 	
 	\subsection{Design Patterns used}
 	\paragraph{Discussion of design patterns implemented in UML diagrams:}
 		Memento: To save a route for future use
-		State: Keep track of user's progress along the route. Have a state for each waypoint
-		Strategy: Provide different means of navigating the same route
+		
+		Splitting the functions of the Navigation module essentially leaves us with two structures within the module. An internal state that is constantly changing as well as a means of navigations (different algorithms to achieve navigation to destination). Keeping this in mind I decided to use the State and Strategy design patterns, these design patterns both function on the same basic principal of modularity and separation of concerns. Additionally, because the Strategy design pattern represents what is essentially a list of directions, if the user decides to save their route so that they may return to it later, the Memento design pattern was included to ensure sensible safekeeping.
+		
+		There are three possible states, namely: "Navigation in progress", "Navigation has been violated" and "Navigation exited successfully". Each one of these states interacts with the chosen strategy in a different way. which is why there is aggregation between the State and Strategy classes.
+		
+		The Strategy class and its subclasses will deal with user constraints by keeping an array of said constraints and constructing a graph using information gathered from both the GIS Module as well as user input to ensure graph traversal will result in a desirable route. 
 	
 \end{document}
