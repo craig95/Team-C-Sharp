@@ -1,1 +1,58 @@
-Navigation stuff go in here
+\documentclass[a4paper,12pt]{article}
+\usepackage{array}
+\newcolumntype{L}{>{\centering\arraybackslash}m{8cm}}
+
+%	Mia Gerber 
+%	15016502
+%	
+%	COS 301: Assignment 2
+%
+%	Navigation Subsystem: Requirements, Constraints and Attributes
+
+\begin{document}
+	\newpage
+	\section{Navigation}
+	
+	\subsection{External Interface Requirements}
+	\paragraph 
+		These requirements relate to both interfacing with other subsystems within the UP Nav system as well as interfacing 
+		with the hardware that the application will be deployed on.
+	\begin{itemize}
+		\small
+		\item To "Notifications" module will be used to give directions to the user during navigation in the form of push notifications.
+		\item The "Points of interest" module will be seen by the Navigation module simply as destinations to be navigated to or as a current location.
+		\item 
+	\end{itemize}
+	
+	\subsection{Performance Requirements}
+	\begin{itemize}
+		\small
+		\item 	
+	\end{itemize}
+	
+	\subsection{Design Constraints}
+	\begin{itemize}
+		\small
+		\item The use of design patterns is crucial to object oriented software engineering but we are limited 
+			in the types of design patterns we are able to use within the subsystems due to the requirements 
+			imposed upon the system as a whole.
+		\item The Navigation subsystem receives critical information from the GIS subsystem to ensure that the route
+			calculated is correct and to recalculate the route in real time if the user goes off track.The coupling between
+			these two modules will have to be high to ensure the user's needs are met.\
+	\end{itemize}
+	
+	\subsection{Software System Attributes}
+	\begin{itemize}
+		\small 
+		\item High cohesion with low coupling allowing for easy addition, removal or replacement of modules.
+		\item Polymorphism will be implemented as means of specifying object behaviour when the user imposes restrictions
+			upon the base behaviour of the object.
+	\end{itemize}
+	
+	\subsection{Design Patterns used}
+	\paragraph{Discussion of design patterns implemented in UML diagrams:}
+		Memento: To save a route for future use
+		State: Keep track of user's progress along the route. Have a state for each waypoint
+		Strategy: Provide different means of navigating the same route
+	
+\end{document}
