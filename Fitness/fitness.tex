@@ -17,6 +17,20 @@
 	To track steps continuously with a background process will greatly impact the battery life of devices with small battery capacities. 
 \end{enumerate}
 
+\subsection{Software System Attributes} 
+\subsubsection{Reliability} 
+The fitness module must be able to accurately and reliably track movement through the devices accelerometer. This accuracy and reliability ensures that the calculation of steps, calories and other health related data is accurate. The accuracy and reliability requirements are to ensure that milestones and awards are distributed accurately.    
+
+\subsubsection{Efficiency} 
+In order for the application to efficiently count steps and calculate other health metrics, the fitness module needs efficient algorithms to calculate the steps and other health metrics quickly from the data it recives from the accelerometer.  
+
+\subsubsection{Portability} 
+The fitness module should be able to work on both iOS and Android devices. There should also be no discernible differences between the fitness module on iOS and the fitness module on Android devices. They should also yield the same the same health metrics. 
+
+\subsubsection{Coupling} 
+The fitness module should also integrate with the user module. It should be able to request the users age and name. The fitness module should also be able to write data such as the users height and weight. Minimal helth metrics should also be sent to the user module to be stored on the server. 
+
+
 \subsection{Activity Diagram}
 See figure~\ref{fig:fitness_activity_diagram} on page~\pageref{fig:fitness_activity_diagram}
 \begin{figure}
