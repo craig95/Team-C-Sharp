@@ -1,5 +1,17 @@
 \subsection{External Interface Requirements}
+\begin{itemize}
+	\item The user module interface will provide the user with a clean and smart design, which will make it easy for the user to access the system and logon or register with no unwanted constraints.
+	\item The user will only be allowed to access his/her application via a smartphone or tablet. The software will work on any operating system. 
+        \item The application will be able to fit all screen resolutions with screen rotation capabilities.
+	\item When the user logs in or register, his/her information will be sent to a server which will then connect to a database that will either validate the user’s credentials or add the credentials to the system.
+	\item To meet disability requirements, users can use the accessibility function that is built into almost all smartphones and tablets.
+\end{itemize}
 \subsection{Performance Requirements}
+\begin{itemize}
+	\item The user system will get from 20 000 to 40 000 login requests a day. This branches of into registered students logging into the system more than once a day and guests registering and logging into the system
+	\item The user system will have at most 1000 guests using the application on the campus but this value varies in the beginning of the year because most first year have not registered within the first few weeks of the academic year. 
+        \item The user system might slow down depending on how the database is implemented and how big it will be but the design patterns used help improve database efficiency and improves server response time.
+\end{itemize}
 \subsection{Design Constraints}
 \begin{enumerate}
 	\item Query caching
