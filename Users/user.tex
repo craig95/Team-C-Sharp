@@ -19,25 +19,40 @@
 	In order to avoid traffic requests to the database and to speed up database , query caching is crucial. AdoDB provides powerful caching system which can implemented in the navUP system and help improve speed regarding interaction between front end and database.
 \end{enumerate}
 \subsection{Software System Attributes}
-\begin{enumerate}
-	\item Security
-	\newline
+
+	\subsubsection{Security}
 	The navUP system will need to adhere to the highest security standards because of the personal information of users that will be stored. In order to achieve security , The navUP system needs to store users’ information and the passwords should be stored in the database as encrypted to remain hidden from the unauthorised users  .
-	\item Performance
-	\newline
+	\subsubsection{Performance}
 	The system should ensure that basic operations like user registration , user login should be of maximum speed. 
-	\item Availability
-	\newline
+	\subsubsection{Availability}
 	The navUP system will need to be connected to the internet to ensure that the system can communicate with  the database.
-	\item Reliability
-	\newline
+	\subsubsection{Reliability}
 	The navUP system will need to work roburstly without any failures including failure to retrieve information from the database.
-\end{enumerate}
+
 \subsection{UML diagrams}
+\subsubsection{Class diagram}
+\begin{figure}[H]
+	\includegraphics[width=12cm,height=26cm,keepaspectratio]{Users/Pictures/User_Class_Diagram.png}
+	\caption{Class diagram for user management module}\label{visina8}
+\end{figure}
+\paragraph{Discussion of design patterns implemented in UML diagrams:}
+		In the user class diagram, I used the bridge design pattern combined with the command pattern. I used the bridge pattern because it maintains a stable client interface while allowing the implementations change. Thus, when a Non-Registered user registers then the implementation can change to registered user implementation and the client will not be affected by the changes in implementation. The client does not know which concrete implementation is being used which is good in terms of security so the client cannot damage the system. The command pattern is used to allow the for requests to be encapsulated which reduces the code size and it allows the operations to be executed in different ways. The requests can be queued and executed later which is useful in increasing the performance of operations. By decoupling the operations is reduces the amount of request that it will have with the database thus, making it more efficient and making the other database operations run faster.
+		
+\subsubsection{Sequence diagram}
+\begin{figure}[H]
+	\includegraphics[width=12cm,height=26cm,keepaspectratio]{Users/Pictures/user_sequence_diagram.png}
+	\caption{Sequence diagram for user management module}\label{visina8}
+\end{figure}
+
 \subsubsection{Activity diagram}
 \begin{figure}[H]
 	\includegraphics[width=12cm,height=26cm,keepaspectratio]{Users/Pictures/user_Activity_diagram.png}
 	\caption{Activity diagram for user management module}\label{visina8}
+\end{figure}
+\subsubsection{State diagram}
+\begin{figure}[H]
+	\includegraphics[width=12cm,height=26cm,keepaspectratio]{Users/Pictures/User_State_Diagram.png}
+	\caption{State diagram for user management module}\label{visina8}
 \end{figure}
 \subsubsection{Use Case diagram}
 \begin{figure}[H]
