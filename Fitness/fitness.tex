@@ -57,3 +57,70 @@ See figure~\ref{fig:fitness_deployment_diagram} on page~\pageref{fig:fitness_dep
 	\caption{Fitness Deployment Diagram}
 	\label{fig:fitness_deployment_diagram}
 \end{figure}
+
+\subsection{Class Diagram}
+See figure~\ref{fig:Fitness_Class_Diagram} on page~\pageref{fig:Fitness_Class_Diagram}
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.54]{Fitness/Fitness_Class_Diagram.png}
+	\caption{Fitness Class Diagram}
+	\label{fig:Fitness_Class_Diagram}
+\end{figure}
+
+\subsection{Sequence Diagram}
+See figure~\ref{fig:Fitness_Sequence_Diagram} on page~\pageref{fig:Fitness_Sequence_Diagram}
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.54]{Fitness/Fitness_Sequence_Diagram.png}
+	\caption{Fitness Sequence Diagram}
+	\label{fig:Fitness_Sequence_Diagram}
+\end{figure}
+
+\subsection{Use Case Diagram}
+See figure~\ref{fig:Fitness_Use_Case_Diagram} on page~\pageref{fig:Fitness_Use_Case_Diagram}
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.54]{Fitness/Fitness_Use_Case_Diagram.png}
+	\caption{Fitness Use Case Diagram}
+	\label{fig:Fitness_Use_Case_Diagram}
+\end{figure}
+
+\subsubsection{Performance Requirements}
+\begin{enumerate}
+	\item Tracking Information Accuracy
+	\newline
+	The tracking information that is obtained from the Navigation module needs to be as accurate as possible. This will ensure that the information calculated by the fitness module will be accurate and ensure that the user is presented with information that is not false.
+	\item Server Storage
+	\newline
+	The information obtained from other modules and calculated inside the fitness module is to be stored on the server hosting the NavUP application. This means that the server will need to store certain fitness statistics and health information for roughly 60 000 users. The information will need to be able to be stored in a concurrent manner as to not create performance delays during application use.
+	\newline
+	By storing the fitness information on the server rather than keeping it on the handheld device, we avoid complications whereby the user might uninstall and reinstall the application. Situations whereby the user gets a new phone or performs any actions where there may be data loss can be dealt with in this manner because then information can be re-downloaded.  
+	\newline
+By storing fitness information on the server we can also provide a future integration where health-insurance companies could link to the database and use the information to provide some form of a reward system for the user based on his/her fitness achievements.  
+
+\item The User Experience 
+	\newline
+All calculations with regards to fitness statistics and other fitness information is to be done on the device itself rather than using the application server. This will relieve the server of traffic and avoid a congested wireless network on campus. The user experience, with regards to local device calculations needs to be perceived as smooth and not be delayed by the calculations.
+
+\item Communication transfer from phone to server
+	\newline
+Information transfer between the phone and the server is required to happen in a timely manner when the user requests to calculate fitness information. If the information were to take too long to be retrieved from the server to the phone then the user would have to wait longer than expected to see the fitness information.
+	\newline
+With these requirements of fast data transfers there becomes an inherent requirement with regards to the data being sent and retrieved. The data would have to be stored in a format of minimal size as to optimize the fore-mentioned process.
+
+
+\item Reporting of fitness information
+	\newline
+The reporting part of the fitness module would need to be able to summarize, format and display certain information in a timely manner as to not delay the user interface thread. This would occur when the user selects the option to view his/her fitness information.
+
+\end{enumerate}
+
+\subsubsection{Performance Requirements}
+\begin{enumerate}
+	\item Tracking Information Accuracy
+	\newline
+	The tracking information that is obtained from the Navigation module needs to be as accurate as possible. This will ensure that the information calculated by the fitness module will be accurate and ensure that the user is presented with information that is not false.
+\end{enumerate}
+
+
+
