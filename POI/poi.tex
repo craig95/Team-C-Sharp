@@ -14,10 +14,36 @@ The NavUp will primarily run on mobile phones. Therefore, for compatibility requ
 The system will frequently communicate with the campus map database, servers and the mobiles’ GPS to get locations and directions through Wi-Fi networking. Any acquired information of interest with regard to the desired location may be retrieved from the database through servers. The systems’ communication interface may also include web services.
 
 \section{Performance Requirements}
-	\subsection{Accuracy}
-Accuracy is one of the vital performance required for the system. The NavUp system should be accurate enough to get the user’s current position, if for example the user is in the building (indoor) with multiple floors, the system should not necessarily determine the exact venue, but it should be in range and in real time. The system should have a good ranging accuracy. The accuracy of the system is defined as the solution error, and the accuracy of the system should conform to position range and the PVT (Position, Velocity and Time). This will be useful in terms of “points of interest” where accuracy is very important when determining locations.
-	\subsection{Availability}
-The NavUp may encounter some positional errors while trying to determine locations and directions, so availability is the amount/percentage of time that the NavUp system can be used (i.e. finding locations and directions, etc.). Therefore, provided that the ranging position errors are less, the Dilution of Precision (DOP) values will be higher, resulting in a better accuracy and thus the availability of the system increases.
-	\subsection{Integrity}
-The probability that positioning errors will take place is measured by the integrity of the system, which in-turn can be used for optimizing ranging accuracy.
+	\subsection{Track creation/ Route update}
+	The NavUp system should also keep track of the user's current location
+	so to update the route displayed on the user's screen interface, however 
+	the system should not necessarily update the route every after 1 second, the 
+	route update can be in an interval of 7 seconds per update.
+	\subsection{User login response time}
+	The users will be required to login, provided that the user has
+	entered correct credentials, the NavUp system should take no longer
+	than 6 seconds to provide full system access to the user. However, this
+	may be dependent on the internet connection bandwith.
+	\subsection{Positional accuracy}
+	Accuracy is one of the vital performance required for the system. The NavUp 
+	system should be accurate enough to get the user’s current position, if for 
+	example the user is in the building (indoor) with multiple floors, the system 
+	should not necessarily determine the exact venue, but it should be in range and 
+	in real time.\\\\ The system should have a good ranging accuracy. The accuracy of the 
+	system is defined as the solution error, and the accuracy of the system should conform 
+	to position range and the PVT (Position, Velocity and Time). This will be useful in 
+	terms of “points of interest” where accuracy is very important when determining locations.
+	\subsection{Proximity of notifications}
+	The user will recieve any information of interest for the locations he/she visits, the amount
+	of time it takes to recieve the notification shouldn't be long, this is to say, the system should 
+	be responsive enough to an extent that when the user gets to the desired location, it takes no longer 
+	than 25 seconds to recieve the notification.
+	
+	%Diagrams
+	\begin{figure}[H]\includegraphics[width=\textwidth]{POI - Activity diagram}\end{figure}
+		\begin{center}Figure xx\end{center}
+	\begin{figure}[H]\includegraphics[width=\textwidth]{POI - State Machine diagram}\end{figure}
+		\begin{center}Figure xx\end{center}
+	\begin{figure}[H]\includegraphics[width=\textwidth]{POI - Use Case diagram}\end{figure}
+		\begin{center}Figure xx\end{center}
 \end{document}
