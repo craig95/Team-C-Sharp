@@ -129,7 +129,7 @@ See figure~\ref{fig:Fitness_Class_Diagram} on page~\pageref{fig:Fitness_Class_Di
 
 \subsection{Design Patterns Used}
 \paragraph{Facade}
-To provide a simple interface to use the fitness module. The FitUser class inherits from the user class but also provides an interface for the rest of the Fitness Module. The fitCounter, fitCalculator, and fitReport abstract the more complex functions away from the fitUser.
+This design pattern provides a simple interface to use the fitness module. The FitUser class inherits from the user class but also provides an interface for the rest of the Fitness Module. Without this interface the other components of the system (fitCounter, fitCalculator, and fitReport) would not be able to execute using the original user class. The fitCounter, fitCalculator, and fitReport abstract the more complex functions away from the fitUser. They are clients to the fitUser class.
 
 \subsection{Activity Diagram}
 See figure~\ref{fig:fitness_activity_diagram} on page~\pageref{fig:fitness_activity_diagram}
