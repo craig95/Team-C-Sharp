@@ -1,7 +1,4 @@
-\documentclass[a4paper,12pt]{article}
-\usepackage{array}
-\usepackage{graphicx}
-\newcolumntype{L}{>{\centering\arraybackslash}m{8cm}}
+
 
 %	Mia Gerber 
 %	15016502
@@ -10,7 +7,6 @@
 %
 %	Navigation Subsystem: Requirements, Constraints and Attributes
 
-\begin{document}
 	\newpage
 	\section{Navigation}
 	
@@ -61,10 +57,26 @@
 	  \label{fig:UML1}
 	\end{figure}
 	
+	\subsection{Design Patterns used}
+	\paragraph{Discussion of design patterns implemented in UML diagrams:}
+		Memento: To save a route for future use
+		
+		Splitting the functions of the Navigation module essentially leaves us with two structures within the module. An internal state that is constantly changing as well as a means of navigations (different algorithms to achieve navigation to destination). Keeping this in mind I decided to use the State and Strategy design patterns, these design patterns both function on the same basic principal of modularity and separation of concerns. Additionally, because the Strategy design pattern represents what is essentially a list of directions, if the user decides to save their route so that they may return to it later, the Memento design pattern was included to ensure sensible safekeeping.
+		
+		There are three possible states, namely: "Navigation in progress", "Navigation has been violated" and "Navigation exited successfully". Each one of these states interacts with the chosen strategy in a different way. which is why there is aggregation between the State and Strategy classes.
+		
+		The Strategy class and its subclasses will deal with user constraints by keeping an array of said constraints and constructing a graph using information gathered from both the GIS Module as well as user input to ensure graph traversal will result in a desirable route. 
+	
 	\begin{figure}
 	  \includegraphics[width=\linewidth]{NavigationModuleActivityDiagram.png}
 	  \caption{UML Activity Diagram}
 	  \label{fig:UML2}
+	\end{figure}
+	
+	\begin{figure}
+	  \includegraphics[width=\linewidth]{NavigationModuleSequenceDiagram.png}
+	  \caption{UML Sequence Diagram}
+	  \label{fig:UML5}
 	\end{figure}
 	
 	\begin{figure}
@@ -79,22 +91,10 @@
 	  \label{fig:UML4}
 	\end{figure}
 	
-	\begin{figure}
-	  \includegraphics[width=\linewidth]{NavigationModuleSequenceDiagram.png}
-	  \caption{UML Sequence Diagram}
-	  \label{fig:UML5}
-	\end{figure}
+	
 
 
 	
-	\subsection{Design Patterns used}
-	\paragraph{Discussion of design patterns implemented in UML diagrams:}
-		Memento: To save a route for future use
-		
-		Splitting the functions of the Navigation module essentially leaves us with two structures within the module. An internal state that is constantly changing as well as a means of navigations (different algorithms to achieve navigation to destination). Keeping this in mind I decided to use the State and Strategy design patterns, these design patterns both function on the same basic principal of modularity and separation of concerns. Additionally, because the Strategy design pattern represents what is essentially a list of directions, if the user decides to save their route so that they may return to it later, the Memento design pattern was included to ensure sensible safekeeping.
-		
-		There are three possible states, namely: "Navigation in progress", "Navigation has been violated" and "Navigation exited successfully". Each one of these states interacts with the chosen strategy in a different way. which is why there is aggregation between the State and Strategy classes.
-		
-		The Strategy class and its subclasses will deal with user constraints by keeping an array of said constraints and constructing a graph using information gathered from both the GIS Module as well as user input to ensure graph traversal will result in a desirable route. 
 	
-\end{document}
+	
+
