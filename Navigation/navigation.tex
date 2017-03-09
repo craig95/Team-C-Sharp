@@ -1,6 +1,4 @@
-\documentclass[a4paper,12pt]{article}
-\usepackage{array}
-\newcolumntype{L}{>{\centering\arraybackslash}m{8cm}}
+
 
 %	Mia Gerber 
 %	15016502
@@ -9,7 +7,6 @@
 %
 %	Navigation Subsystem: Requirements, Constraints and Attributes
 
-\begin{document}
 	\newpage
 	\section{Navigation}
 	
@@ -54,6 +51,12 @@
 		 GIS data.
 	\end{itemize}
 	
+	\begin{figure}
+	  \includegraphics[width=\linewidth]{NavigationModuleClassDiagram(v2_noMethods).png}
+	  \caption{UML Class Diagram}
+	  \label{fig:UML1}
+	\end{figure}
+	
 	\subsection{Design Patterns used}
 	\paragraph{Discussion of design patterns implemented in UML diagrams:}
 		Memento: To save a route for future use
@@ -64,4 +67,34 @@
 		
 		The Strategy class and its subclasses will deal with user constraints by keeping an array of said constraints and constructing a graph using information gathered from both the GIS Module as well as user input to ensure graph traversal will result in a desirable route. 
 	
-\end{document}
+	\begin{figure}
+	  \includegraphics[width=\linewidth]{NavigationModuleActivityDiagram.png}
+	  \caption{UML Activity Diagram}
+	  \label{fig:UML2}
+	\end{figure}
+	
+	\begin{figure}
+	  \includegraphics[width=\linewidth]{NavigationModuleSequenceDiagram.png}
+	  \caption{UML Sequence Diagram}
+	  \label{fig:UML5}
+	\end{figure}
+	
+	\begin{figure}
+	  \includegraphics[width=\linewidth]{NavigationModuleStateDiagram.png}
+	  \caption{UML State Diagram}
+	  \label{fig:UML3}
+	\end{figure}
+	
+	\begin{figure}
+	  \includegraphics[width=\linewidth]{NavigationModuleUseCaseDiagram.png}
+	  \caption{UML Use Case Diagram}
+	  \label{fig:UML4}
+	\end{figure}
+	
+	
+
+
+	
+	
+	
+
