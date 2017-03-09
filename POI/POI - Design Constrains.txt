@@ -2,13 +2,13 @@
 
 \subsubsection{Navigation Application Development}
 \begin{enumerate}
-\item The application is to be built using a webpage based on IDE (Intergrated Developmet Environment)
+\item The application is to be built using a webpage based on IDE (Integrated Development Environment)
 \item All coding should be done in one programming language  
 \end{enumerate}
 
 \subsubsection{Navigation Application}
 \begin{enumerate}
-\item The App should be compatable with a smartphone (Android or iOS) and can connect to Wifi
+\item The App should be compatible with a smartphone (Android or iOS) and can connect to Wifi
 \item The user is required to have basic computer skills to understand and use the App
 \item The App must allow the user access it easily without violating users personal information 
 \item Response time for functions of the App should not take long
