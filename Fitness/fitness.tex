@@ -1,59 +1,59 @@
 \subsubsection{External Interface Requirements}
-\begin{table}[]
-\centering
-\caption{User Information}
-\label{my-label}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{|l|l|}
-\hline
-Name                                                            & User information                                                                                                                                                                                                                             \\ \hline
-Description                                                     & This is information about the user such as Age, Weight, Height and Identification,variables                                                                                                                                                  \\ \hline
-\begin{tabular}[c]{@{}l@{}}Source\\ \& Destination\end{tabular} & \begin{tabular}[c]{@{}l@{}}Source:\\ Server, Destination: Device/Application\end{tabular}                                                                                                                                                    \\ \hline
-\begin{tabular}[c]{@{}l@{}}Range,\\ accuracy\end{tabular}       & The range of this data : ID (0-60000), Age(0-120),Weight(20-500),Height(20-300)                                                                                                                                                              \\ \hline
-\begin{tabular}[c]{@{}l@{}}Unit\\ of measure\end{tabular}       & ID: Integer,,Age: Integer, Weight: kilograms, Height: centimeters                                                                                                                                                                            \\ \hline
-Timing                                                          & \begin{tabular}[c]{@{}l@{}}The information will be kept on device until such a point that the user logs out or\\ uninstalls. The Information will be kept on server until such a point that the\\ user deletes his/her account.\end{tabular} \\ \hline
-\begin{tabular}[c]{@{}l@{}}Relations\\ to other\end{tabular}    & \begin{tabular}[c]{@{}l@{}}This data relates to the ‘Fitness Information’ data because they are used in the\\ calculations of the fitness statistics.\end{tabular}                                                                           \\ \hline
-\begin{tabular}[c]{@{}l@{}}Data\\ format\end{tabular}           & \begin{tabular}[c]{@{}l@{}}This data relates to the ‘Fitness Information’ data because they are used in the\\ calculations of the fitness statistics.\end{tabular}                                                                           \\ \hline
-\end{tabular}%
-}
+\begin{table}[H]
+	\centering
+	\caption{User Information}
+	\label{my-label}
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{|l|l|}
+			\hline
+			Name                                                            & User information                                                                                                                                                                                                                             \\ \hline
+			Description                                                     & This is information about the user such as Age, Weight, Height and Identification,variables                                                                                                                                                  \\ \hline
+			\begin{tabular}[c]{@{}l@{}}Source\\ \& Destination\end{tabular} & \begin{tabular}[c]{@{}l@{}}Source:\\ Server, Destination: Device/Application\end{tabular}                                                                                                                                                    \\ \hline
+			\begin{tabular}[c]{@{}l@{}}Range,\\ accuracy\end{tabular}       & The range of this data : ID (0-60000), Age(0-120),Weight(20-500),Height(20-300)                                                                                                                                                              \\ \hline
+			\begin{tabular}[c]{@{}l@{}}Unit\\ of measure\end{tabular}       & ID: Integer,,Age: Integer, Weight: kilograms, Height: centimeters                                                                                                                                                                            \\ \hline
+			Timing                                                          & \begin{tabular}[c]{@{}l@{}}The information will be kept on device until such a point that the user logs out or\\ uninstalls. The Information will be kept on server until such a point that the\\ user deletes his/her account.\end{tabular} \\ \hline
+			\begin{tabular}[c]{@{}l@{}}Relations\\ to other\end{tabular}    & \begin{tabular}[c]{@{}l@{}}This data relates to the ‘Fitness Information’ data because they are used in the\\ calculations of the fitness statistics.\end{tabular}                                                                           \\ \hline
+			\begin{tabular}[c]{@{}l@{}}Data\\ format\end{tabular}           & \begin{tabular}[c]{@{}l@{}}This data relates to the ‘Fitness Information’ data because they are used in the\\ calculations of the fitness statistics.\end{tabular}                                                                           \\ \hline
+		\end{tabular}%
+	}
 \end{table}
 
-\begin{table}[]
-\centering
-\caption{Navigational Information}
-\label{my-label}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{|l|l|}
-\hline
-Name                                                            & Navigational Information                                                                                                                                                                                                                                                                                         \\ \hline
-Description                                                     & This is the,navigational data that allows the user to navigate around campus. More,specifically with regards to fitness this data will allow us to keep track of,distances and allow fitness statistics to be drawn from the distances,travelled during navigation                                               \\ \hline
-\begin{tabular}[c]{@{}l@{}}Source\\ \& Destination\end{tabular} & Source:Server, Destination: Device/Application                                                                                                                                                                                                                                                                   \\ \hline
-\begin{tabular}[c]{@{}l@{}}Range,\\ accuracy\end{tabular}       & \begin{tabular}[c]{@{}l@{}}The range of this information would be roughly (0-100km) as an estimate of the\\ absolute maximum someone would walk in a single day on campus.\end{tabular}                                                                                                                          \\ \hline
-\begin{tabular}[c]{@{}l@{}}Unit\\ of measure\end{tabular}       & The unit of,measure for this specific data would be in kilometers                                                                                                                                                                                                                                                \\ \hline
-Timing                                                          & \begin{tabular}[c]{@{}l@{}}The information will be kept on device until such a point that the user logs out or\\ uninstalls. The Information will be kept on server until such a point that the\\ user deletes his/her account.\end{tabular}                                                                     \\ \hline
-\begin{tabular}[c]{@{}l@{}}Relations\\ to other\end{tabular}    & \begin{tabular}[c]{@{}l@{}}This information relates to ‘fitness information’ because the distances travelled\\ during navigation are to be used in calculating the number of steps made and is\\ crucial in the calculations of calories burned and other fitness statistics\\ that are calculated.\end{tabular} \\ \hline
-\begin{tabular}[c]{@{}l@{}}Data\\ format\end{tabular}           & The format,of this would be stored in a float value as to allow accuracy of distances,travelled and would be transferred over JSON as to integrate with our chosen,technology of using Cordova                                                                                                                   \\ \hline
-\end{tabular}%
-}
+\begin{table}[H]
+	\centering
+	\caption{Navigational Information}
+	\label{my-label}
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{|l|l|}
+			\hline
+			Name                  & Navigational Information                                                                                                                                                                                                                                                                                                 \\ \hline
+			Description           & \begin{tabular}[c]{@{}l@{}}This is the, navigational data that allows the user to navigate around campus. \\ More, specifically with regards to fitness this data will allow us to keep track \\ of, distances and allow fitness statistics to be drawn from the distances, \\ travelled during navigation.\end{tabular} \\ \hline
+			Source \& Destination & Source:Server, Destination: Device/Application                                                                                                                                                                                                                                                                           \\ \hline
+			Range, accuracy       & \begin{tabular}[c]{@{}l@{}}The range of this information would be roughly (0-100km) as an estimate of \\ the absolute maximum someone would walk in a single day on campus.\end{tabular}                                                                                                                                 \\ \hline
+			Unit of measure       & The unit of,measure for this specific data would be in kilometers.                                                                                                                                                                                                                                                       \\ \hline
+			Timing                & \begin{tabular}[c]{@{}l@{}}The information will be kept on device until such a point that the user logs out \\ or uninstalls. The Information will be kept on server until such a point that the \\ user deletes their account.\end{tabular}                                                                             \\ \hline
+			Relations to other    & \begin{tabular}[c]{@{}l@{}}This information relates to ‘fitness information’ because the distances travelled \\ during navigation are to be used in calculating the number of steps made and is \\ crucial in the calculations of calories burned and other fitness statistics that are \\ calculated.\end{tabular}      \\ \hline
+			Data format           & \begin{tabular}[c]{@{}l@{}}The format,of this would be stored in a float value as to allow accuracy of \\ distances,travelled and would be transferred over JSON as to integrate with our \\ chosen, technology of using Cordova.\end{tabular}                                                                           \\ \hline
+		\end{tabular}%
+	}
 \end{table}
 
-\begin{table}[]
-\centering
-\caption{Fitness Information}
-\label{my-label}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{|l|l|}
-\hline
-Name                                                            & Fitness information                                                                                                                                                                                                                                                                                                                                                                        \\ \hline
-Description                                                     & \begin{tabular}[c]{@{}l@{}}This is information that is calculated using\\ user information and navigational information and is presented to the user as\\ statistical data of fitness\end{tabular}                                                                                                                                                                                         \\ \hline
-\begin{tabular}[c]{@{}l@{}}Source\\ \& Destination\end{tabular} & Source: Application/Device, Destination :Server                                                                                                                                                                                                                                                                                                                                            \\ \hline
-\begin{tabular}[c]{@{}l@{}}Range,\\ accuracy\end{tabular}       & \begin{tabular}[c]{@{}l@{}}The range of this data is : DayStep(0-100,000) ,\\ DayCalories(0-10000) DayHeight(0-10000) as maximum that one would be able to\\ walk, burn or climb in a single day.\end{tabular}                                                                                                                                                                             \\ \hline
-\begin{tabular}[c]{@{}l@{}}Unit\\ of measure\end{tabular}       & DayStep:,Integer, DayCalories: Calories, DayClimb: Meters                                                                                                                                                                                                                                                                                                                                  \\ \hline
-Timing                                                          & The information will be kept on device,until such a point that the user logs out or uninstalls. The Information will,be kept on server until such a point that the user deletes his/her account.                                                                                                                                                                                           \\ \hline
-\begin{tabular}[c]{@{}l@{}}Relations\\ to other\end{tabular}    & \begin{tabular}[c]{@{}l@{}}This information is related to user information\\ as the user information is required to determine the fitness statistics. It is\\ also related to navigational data because the distances measured in\\ navigational data are used for the step count and the calories burned as well\\ as determining how high the user has climbed in that day.\end{tabular} \\ \hline
-\begin{tabular}[c]{@{}l@{}}Data\\ format\end{tabular}           & \begin{tabular}[c]{@{}l@{}}This information is related to user information\\ as the user information is required to determine the fitness statistics. It is\\ also related to navigational data because the distances measured in\\ navigational data are used for the step count and the calories burned as well\\ as determining how high the user has climbed in that day.\end{tabular} \\ \hline
-\end{tabular}%
-}
+\begin{table}[H]
+	\centering
+	\caption{Fitness Information}
+	\label{my-label}
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{|l|l|}
+			\hline
+			Name                  & Fitness information                                                                                                                                                                                                                                                                                                                                                                         \\ \hline
+			Description           & \begin{tabular}[c]{@{}l@{}}This is information that is calculated using user information and navigational \\ information and is presented to the user as statistical data of fitness.\end{tabular}                                                                                                                                                                                          \\ \hline
+			Source \& Destination & Source: Application/Device, Destination :Server                                                                                                                                                                                                                                                                                                                                             \\ \hline
+			Range, accuracy       & \begin{tabular}[c]{@{}l@{}}The range of this data is : DayStep(0-100,000) , DayCalories(0-10000) \\ DayHeight(0-10000) as maximum that one would be able to\\textbackslash walk, burn or \\ climb in a single day.\end{tabular}                                                                                                                                                             \\ \hline
+			Unit of measure       & DayStep: Integer, DayCalories: Calories, DayClimb: Meters                                                                                                                                                                                                                                                                                                                                   \\ \hline
+			Timing                & \begin{tabular}[c]{@{}l@{}}The information will be kept on device,until such a point that the user logs out \\ or uninstalls. The Information will, be kept on server until such a point that the \\ user deletes his/her account.\end{tabular}                                                                                                                                             \\ \hline
+			Relations to other    & \begin{tabular}[c]{@{}l@{}}This information is related to user information as the user information is required \\ to determine the fitness statistics. It is also related to navigational data because the \\ distances measured in navigational data are used for the step count and the calories \\ burned as well as determining how high the user has climbed in that day.\end{tabular} \\ \hline
+			Data format           & \begin{tabular}[c]{@{}l@{}}This information is related to user information as the user information is required to \\ determine the fitness statistics. It is also related to navigational data because the \\ distances measured in navigational data are used for the step count and the calories \\ burned as well as determining how high the user has climbed in that day.\end{tabular} \\ \hline
+		\end{tabular}%
+	}
 \end{table}
 
 \subsubsection{Performance Requirements}
