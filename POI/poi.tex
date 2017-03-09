@@ -47,3 +47,37 @@ The system will frequently communicate with the campus map database, servers and
 	\begin{figure}[H]\includegraphics[width=\textwidth]{UseCaseDiagram}
 	\caption{UML Use Case Diagram}
 	\end{figure}
+	
+	\subsection{Software System Attributes} 
+	\begin{itemize}
+	
+	\item Reliability
+	\begin{itemize}
+	\item NavUP App should be reliable in terms of returning accurate results.
+	\end{itemize} 
+	
+	\item Availability
+	\begin{itemize}
+	\item NavUP App shoud always be available when used, exceptions are when there is a network failure.
+	\item For the App to be available it should always be connected to Tuks Wi-Fi.
+	\item App should be connected to GPS to get the user's location, calculate the destination and determine shorted route.
+	\end{itemize} 
+	
+	\item Security
+	\begin{itemize}
+	\item Users input information should not be easily identifiable if it the system is compromised.
+	\item The NavUP App should limit user details to essentials needed for the app to work. 
+	\end{itemize} 
+	
+	\item Maintainability
+	\begin{itemize}
+	\item The NavUP App should be built in a way that the App after a failure is easily repairable.
+	\item The code of the App should be written in a way to acccomodate the future implementation functions. 
+	\item Test Environment should be built to test different fuctions of the application.
+	\end{itemize} 
+	
+	\item Portability 
+	\begin{itemize}
+	\item NavUp App should be portable with Android, any web browser and iOS.
+	\end{itemize} 
+	\end{itemize} 
