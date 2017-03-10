@@ -41,5 +41,29 @@
     
 \section{Users Module}
     \input{Users/user.tex}
+    
+\section{Technologies}
+For the NavUP system to be available to as many users as possible the system needs to be available on the two major mobile operating systems, iOS and Android as well as having a web interface. For the system to work on all three of these platforms we need a framework that works on all of these platforms. The main advantage of having only one framework that works on all three platforms is that it minimizes the amount of code required to make the app compatible with these three platforms. The latest distribution of Cordava, PhoneGap, fits this requirement well.
+
+\paragraph{User Application}
+PhoneGap uses web technologies to create a front-end application for iOS and Android. Because web technologies are used the front-end code can be easily ported to be able to run on a browser. To improve the interface Angular.js and Express.js will be used. Cordova also have many open source plugins available on their website, these plugins make integration with the device's hardware simpler and also provide plugins that will make the implementation of some modules simpler as they have many of the functions these modules require.
+\paragraph{Server}
+The server's operating system will be CentOS. CentOS is a very stable lightweight release of Linux and is primarily used for web servers. Most web hosting companies run their web servers on CentOS because of these reasons. The web server that will be used is Node.js. Node.js works best in real-time applications, because they work so well in real-time applications Node.js is perfect for the NavUP system which needs to provide real time data to the front-end application.
+
+\subsubsection{PhoneGap, Node.js,  and The MEAN Stack Advantages and Disadvantages}
+\begin{table}[H]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{|l|l|}
+			\hline
+			\multicolumn{1}{|c|}{\textbf{Advantages}}                                                                                     & \textbf{Disadvantages}                                                                                                                                           \\ \hline
+			\begin{tabular}[c]{@{}l@{}}PhoneGap works on all three required \\ platforms.\end{tabular}                                    & \begin{tabular}[c]{@{}l@{}}PhoneGap is not native to any of the \\ three platforms and performance can \\ sometimes be subdued.\end{tabular}                     \\ \hline
+			PhoneGap is free.                                                                                                             & \begin{tabular}[c]{@{}l@{}}PhoneGap does not support all\\  functionality that might be needed.\end{tabular}                                                     \\ \hline
+			Node.js is great for real time applications                                                                                   & \begin{tabular}[c]{@{}l@{}}Node.js isn’t consistent. It’s several, \\ development firms feel that the API \\ keeps enhancing at frequent intervals.\end{tabular} \\ \hline
+			CentOS is perfect for web servers.                                                                                            & \begin{tabular}[c]{@{}l@{}}CentOS is not frequently updated and\\  therefore new software is not always \\ available.\end{tabular}                               \\ \hline
+			\begin{tabular}[c]{@{}l@{}}JavaScript will be the main language used, \\ which will simplify the implementation.\end{tabular} & \begin{tabular}[c]{@{}l@{}}JavaScript can sometimes be slow to \\ execute.\end{tabular}                                                                          \\ \hline
+		\end{tabular}%
+	}
+\end{table}
 
 \end{document}
