@@ -39,6 +39,9 @@ The user will recieve any information of interest for the locations he/she visit
     \subsubsection{Maintainability}
         The points of interest needs to be maintained. When there are new points of interests they need to be added to the system. If a point of interest has new information it needs to be updated in the system.
 
+\subsection{Design Canstraints}
+Getting the current location will be difficult using WiFi because it is hard to triangulate the position of one device due to the face that the WiFi signal will not give you an accurate representation of where the device is. At best the current location might vary by 10m to 15m depending on the objects it had to pass though e.g. wall or roof. If the user cannot get WiFi signal it will be hard for the user to get the current location because then it will be using the users data and the user might be reluctant to allow that.
+
 \subsection{Class Diagram}
 See figure~\ref{fig:POI_Class_Diagram} on page~\pageref{fig:POI_Class_Diagram}
 \begin{figure}
