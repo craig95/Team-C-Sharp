@@ -7,11 +7,10 @@
 %
 %	Navigation Subsystem: Requirements, Constraints and Attributes
 
-	\newpage
-	\section{Navigation}
+
 	
 	\subsection{External Interface Requirements}
-	 \textbf{ \paragraph These requirements relate to both interfacing with other subsystems within the UP Nav system as well as interfacing with the hardware that the application will be deployed on.}
+	 \textbf{ These requirements relate to both interfacing with other subsystems within the UP Nav system as well as interfacing with the hardware that the application will be deployed on.}
 	\begin{itemize}
 		\small
 		\item To "Notifications" module will be used to give directions to the user during navigation in the form of push notifications.
@@ -51,10 +50,11 @@
 		 GIS data.
 	\end{itemize}
 	
-	\begin{figure}
-	  \includegraphics[width=\linewidth]{NavigationModuleClassDiagram(v2_noMethods).png}
-	  \caption{UML Class Diagram}
-	  \label{fig:UML1}
+	\subsection{Class Diagram}
+	\begin{figure}[H]
+	\includegraphics[width=\linewidth]{Navigation/NavigationModuleClassDiagram(v2_noMethods).png}
+	\caption{Navigation Class Diagram}
+	\label{fig:UML1}
 	\end{figure}
 	
 	\subsection{Design Patterns used}
@@ -67,28 +67,32 @@
 		
 		The Strategy class and its subclasses will deal with user constraints by keeping an array of said constraints and constructing a graph using information gathered from both the GIS Module as well as user input to ensure graph traversal will result in a desirable route. 
 	
-	\begin{figure}
-	  \includegraphics[width=\linewidth]{NavigationModuleActivityDiagram.png}
-	  \caption{UML Activity Diagram}
-	  \label{fig:UML2}
+	\subsection{Activity Diagram}
+	\begin{figure}[H]
+	\includegraphics[width=\linewidth]{Navigation/NavigationModuleActivityDiagram.png}
+	\caption{Navigation Activity Diagram}
+	\label{fig:UML2}
 	\end{figure}
 	
-	\begin{figure}
-	  \includegraphics[width=\linewidth]{NavigationModuleSequenceDiagram.png}
-	  \caption{UML Sequence Diagram}
-	  \label{fig:UML5}
+	\subsection{Sequence Diagram}
+	\begin{figure}[H]
+	\includegraphics[scale=0.44]{Navigation/NavigationModuleSequenceDiagram.png}
+	\caption{Navigation Sequence Diagram}
+	\label{fig:UML5}
 	\end{figure}
 	
-	\begin{figure}
-	  \includegraphics[width=\linewidth]{NavigationModuleStateDiagram.png}
-	  \caption{UML State Diagram}
-	  \label{fig:UML3}
+	\subsection{State Diagram}
+	\begin{figure}[H]
+	\includegraphics[width=\linewidth]{Navigation/NavigationModuleStateDiagram.png}
+	\caption{Navigation State Diagram}
+	\label{fig:UML3}
 	\end{figure}
 	
-	\begin{figure}
-	  \includegraphics[width=\linewidth]{NavigationModuleUseCaseDiagram.png}
-	  \caption{UML Use Case Diagram}
-	  \label{fig:UML4}
+	\subsection{Use Case Diagram}
+	\begin{figure}[H]
+	\includegraphics[width=\linewidth]{Navigation/NavigationModuleUseCaseDiagram.png}
+	\caption{Navigation Use Case Diagram}
+	\label{fig:UML4}
 	\end{figure}
 	
 	

@@ -119,10 +119,9 @@ The fitness module should be able to work on both iOS and Android devices. There
 The fitness module should also integrate with the user module. It should be able to request the users age and name. The fitness module should also be able to write data such as the users height and weight. Minimal health metrics should also be sent to the user module to be stored on the server. 
 
 \subsection{Class Diagram}
-See figure~\ref{fig:Fitness_Class_Diagram} on page~\pageref{fig:Fitness_Class_Diagram}
-\begin{figure}
+\begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.54]{Fitness/fitness_class_diagram.png}
+	\includegraphics[scale=0.44]{Fitness/fitness_class_diagram.png}
 	\caption{Fitness Class Diagram}
 	\label{fig:Fitness_Class_Diagram}
 \end{figure}
@@ -132,35 +131,35 @@ See figure~\ref{fig:Fitness_Class_Diagram} on page~\pageref{fig:Fitness_Class_Di
 This design pattern provides a simple interface to use the fitness module. The FitUser class inherits from the user class but also provides an interface for the rest of the Fitness Module. Without this interface the other components of the system (fitCounter, fitCalculator, and fitReport) would not be able to execute using the original user class. The fitCounter, fitCalculator, and fitReport abstract the more complex functions away from the fitUser. They are clients to the fitUser class.
 
 \subsection{Activity Diagram}
-See figure~\ref{fig:fitness_activity_diagram} on page~\pageref{fig:fitness_activity_diagram}
-\begin{figure}
+\begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.54]{Fitness/fitness_activity_diagram.png}
+	\includegraphics[scale=0.44]{Fitness/fitness_activity_diagram.png}
 	\caption{Fitness Activity Diagram}
 	\label{fig:fitness_activity_diagram}
 \end{figure}
 
 \subsection{Sequence Diagram}
-See figure~\ref{fig:Fitness_Sequence_Diagram} on page~\pageref{fig:Fitness_Sequence_Diagram}
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.70]{Fitness/fitness_sequence_diagram.png}
 	\caption{Fitness Sequence Diagram}
 	\label{fig:Fitness_Sequence_Diagram}
 \end{figure}
 
-\subsection{State Diagrams}
-See figure~\ref{fig:fitness_state_diagram} on page~\pageref{fig:fitness_state_diagram}
-\begin{figure}
+\newpage
+
+\subsection{State Diagram}
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.54]{Fitness/fitness_state_diagram.png}
 	\caption{Fitness State Diagram}
 	\label{fig:fitness_state_diagram}
 \end{figure}
 
+\newpage
+
 \subsection{Use Case Diagram}
-See figure~\ref{fig:Fitness_Use_Case_Diagram} on page~\pageref{fig:Fitness_Use_Case_Diagram}
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.54]{Fitness/fitness_use_case_diagram.png}
 	\caption{Fitness Use Case Diagram}
