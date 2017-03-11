@@ -43,53 +43,12 @@ The user will recieve any information of interest for the locations he/she visit
 \caption{UML Use Case Diagram}
 \end{figure}
 	
-\subsection{Software System Attributes} 
-\begin{itemize}
-	
-\item Reliability
-\begin{itemize}
-\item NavUP App should be reliable in terms of returning accurate results.
-\end{itemize} 
-	
-\item Availability
-\begin{itemize}
-\item NavUP App shoud always be available when used, exceptions are when there is a network failure.
-	\item For the App to be available it should always be connected to Tuks Wi-Fi.
-	\item App should be connected to GPS to get the user's location, calculate the destination and determine shorted route.
-	\end{itemize} 
-	
-	\item Security
-	\begin{itemize}
-	\item Users input information should not be easily identifiable if it the system is compromised.
-	\item The NavUP App should limit user details to essentials needed for the app to work. 
-	\end{itemize} 
-	
-	\item Maintainability
-	\begin{itemize}
-	\item The NavUP App should be built in a way that the App after a failure is easily repairable.
-	\item The code of the App should be written in a way to acccomodate the future implementation functions. 
-	\item Test Environment should be built to test different fuctions of the application.
-	\end{itemize} 
-	
-	\item Portability 
-	\begin{itemize}
-	\item NavUp App should be portable with Android, any web browser and iOS.
-	\end{itemize} 
-	\end{itemize} 
-	
-	\subsection{Design Constraints}
-	\subsubsection{Navigation Application Development}
-	\begin{enumerate}
-	\item The application is to be built using a webpage based on IDE (Integrated Development Environment)
-	\item All coding should be done in one programming language  
-	\end{enumerate}
-	
-	\subsubsection{Navigation Application}
-	\begin{enumerate}
-	\item The App should be compatible with a smartphone (Android or iOS) and can connect to Wifi
-	\item The user is required to have basic computer skills to understand and use the App
-	\item The App must allow the user access it easily without violating users personal information 
-	\item Response time for functions of the App should not take long
-	\end{enumerate}
-	
-	
+\subsection{Software System Attributes}
+    \subsubsection{Accuracy}
+        The data of the points of interest module needs to be accurate. The saved location of a point of interest needs to be accurate for the navigation module to navigate the user to the point of interest. The information about the point of interest also needs to be accurate to avoid misinformation.
+    \subsubsection{Reusability}
+        The points of interest module should be able to support multiple different types of locations like lecture halls, museums, restaurants, etc. The module should be able to add new types of locations without the need for extending the app.
+    \subsubsection{Usability}
+        A point of interest should be easy to find on the campus map as well as being searchable in the database. The icons on the map should also be relevant and intuitive for the different types of points of interest. The location information should also be easy to find once the user has accessed the point of interest. 
+    \subsubsection{Maintainability}
+        The points of interest needs to be maintained. When there are new points of interests they need to be added to the system. If a point of interest has new information it needs to be updated in the system.
