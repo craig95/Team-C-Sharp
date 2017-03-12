@@ -1,6 +1,4 @@
-\documentclass[a4paper,12pt]{article}
-\usepackage{array}
-\newcolumntype{L}{>{\centering\arraybackslash}m{8cm}}
+
 
 %	Mia Gerber 
 %	15016502
@@ -9,12 +7,28 @@
 %
 %	Navigation Subsystem: Requirements, Constraints and Attributes
 
-\begin{document}
-	\newpage
-	\section{Navigation}
+
 	
 	\subsection{External Interface Requirements}
-	 \textbf{ \paragraph These requirements relate to both interfacing with other subsystems within the UP Nav system as well as interfacing with the hardware that the application will be deployed on.}
+	 \textbf{ These requirements relate to both interfacing with other subsystems within the UP Nav system as well as interfacing with the hardware that the application will be deployed on.}
+	 \begin{table}[H]
+	 	\centering
+	 	\caption{Navigational Information}
+	 	\label{my-label}
+	 	\resizebox{\textwidth}{!}{%
+	 		\begin{tabular}{|l|l|}
+	 			\hline
+	 			Name                  & Navigational Information                                                                                                                                                                                                                                                                                                 \\ \hline
+	 			Description           & \begin{tabular}[c]{@{}l@{}}This is the, navigational data that allows the user to navigate around campus. \\ More, specifically with regards to fitness this data will allow us to keep track \\ of, distances and allow fitness statistics to be drawn from the distances, \\ travelled during navigation.\end{tabular} \\ \hline
+	 			Source \& Destination & Source:Server, Destination: Device/Application                                                                                                                                                                                                                                                                           \\ \hline
+	 			Range, accuracy       & \begin{tabular}[c]{@{}l@{}}The range of this information would be roughly (0-100km) as an estimate of \\ the absolute maximum someone would walk in a single day on campus.\end{tabular}                                                                                                                                 \\ \hline
+	 			Unit of measure       & The unit of,measure for this specific data would be in kilometers.                                                                                                                                                                                                                                                       \\ \hline
+	 			Timing                & \begin{tabular}[c]{@{}l@{}}The information will be kept on device until such a point that the user logs out \\ or uninstalls. The Information will be kept on server until such a point that the \\ user deletes their account.\end{tabular}                                                                             \\ \hline
+	 			Relations to other    & \begin{tabular}[c]{@{}l@{}}This information relates to ‘fitness information’ because the distances travelled \\ during navigation are to be used in calculating the number of steps made and is \\ crucial in the calculations of calories burned and other fitness statistics that are \\ calculated.\end{tabular}      \\ \hline
+	 			Data format           & \begin{tabular}[c]{@{}l@{}}The format,of this would be stored in a float value as to allow accuracy of \\ distances,travelled and would be transferred over JSON as to integrate with our \\ chosen, technology of using Cordova.\end{tabular}                                                                           \\ \hline
+	 		\end{tabular}%
+	 	}
+	 \end{table}
 	\begin{itemize}
 		\small
 		\item To "Notifications" module will be used to give directions to the user during navigation in the form of push notifications.
@@ -54,6 +68,13 @@
 		 GIS data.
 	\end{itemize}
 	
+	\subsection{Class Diagram}
+	\begin{figure}[H]
+	\includegraphics[width=\linewidth]{Navigation/NavigationModuleClassDiagram(v2_noMethods).png}
+	\caption{Navigation Class Diagram}
+	\label{fig:UML1}
+	\end{figure}
+	
 	\subsection{Design Patterns used}
 	\paragraph{Discussion of design patterns implemented in UML diagrams:}
 		Memento: To save a route for future use
@@ -64,4 +85,38 @@
 		
 		The Strategy class and its subclasses will deal with user constraints by keeping an array of said constraints and constructing a graph using information gathered from both the GIS Module as well as user input to ensure graph traversal will result in a desirable route. 
 	
-\end{document}
+	\subsection{Activity Diagram}
+	\begin{figure}[H]
+	\includegraphics[width=\linewidth]{Navigation/NavigationModuleActivityDiagram.png}
+	\caption{Navigation Activity Diagram}
+	\label{fig:UML2}
+	\end{figure}
+	
+	\subsection{Sequence Diagram}
+	\begin{figure}[H]
+	\includegraphics[scale=0.44]{Navigation/NavigationModuleSequenceDiagram.png}
+	\caption{Navigation Sequence Diagram}
+	\label{fig:UML5}
+	\end{figure}
+	
+	\subsection{State Diagram}
+	\begin{figure}[H]
+	\includegraphics[width=\linewidth]{Navigation/NavigationModuleStateDiagram.png}
+	\caption{Navigation State Diagram}
+	\label{fig:UML3}
+	\end{figure}
+	
+	\subsection{Use Case Diagram}
+	\begin{figure}[H]
+	\includegraphics[width=\linewidth]{Navigation/NavigationModuleUseCaseDiagram.png}
+	\caption{Navigation Use Case Diagram}
+	\label{fig:UML4}
+	\end{figure}
+	
+	
+
+
+	
+	
+	
+
