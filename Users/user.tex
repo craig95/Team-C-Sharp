@@ -1,4 +1,22 @@
 \subsection{External Interface Requirements}
+\begin{table}[H]
+	\centering
+	\caption{User Information}
+	\label{my-label}
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{|l|l|}
+			\hline
+			Name                                                            & User information                                                                                                                                                                                                                             \\ \hline
+			Description                                                     & This is information about the user such as Age, Weight, Height and Identification,variables                                                                                                                                                  \\ \hline
+			\begin{tabular}[c]{@{}l@{}}Source\\ \& Destination\end{tabular} & \begin{tabular}[c]{@{}l@{}}Source:\\ Server, Destination: Device/Application\end{tabular}                                                                                                                                                    \\ \hline
+			\begin{tabular}[c]{@{}l@{}}Range,\\ accuracy\end{tabular}       & The range of this data : ID (0-60000), Age(0-120),Weight(20-500),Height(20-300)                                                                                                                                                              \\ \hline
+			\begin{tabular}[c]{@{}l@{}}Unit\\ of measure\end{tabular}       & ID: Integer,,Age: Integer, Weight: kilograms, Height: centimeters                                                                                                                                                                            \\ \hline
+			Timing                                                          & \begin{tabular}[c]{@{}l@{}}The information will be kept on device until such a point that the user logs out or\\ uninstalls. The Information will be kept on server until such a point that the\\ user deletes his/her account.\end{tabular} \\ \hline
+			\begin{tabular}[c]{@{}l@{}}Relations\\ to other\end{tabular}    & \begin{tabular}[c]{@{}l@{}}This data relates to the ‘Fitness Information’ data because they are used in the\\ calculations of the fitness statistics.\end{tabular}                                                                           \\ \hline
+			\begin{tabular}[c]{@{}l@{}}Data\\ format\end{tabular}           & \begin{tabular}[c]{@{}l@{}}This data relates to the ‘Fitness Information’ data because they are used in the\\ calculations of the fitness statistics.\end{tabular}                                                                           \\ \hline
+		\end{tabular}%
+	}
+\end{table}
 \begin{itemize}
 	\item The user module interface will provide the user with a clean and smart design, which will make it easy for the user to access the system and logon or register with no unwanted constraints.
 	\item The user will only be allowed to access his/her application via a smartphone or tablet. The software will work on any operating system. 
